@@ -1,0 +1,294 @@
+section {
+  background: #151515;
+  padding-top: 5rem;
+  /* padding-bottom: 5rem; */
+  overflow: hidden;
+
+
+  @media (max-width: 760px) {
+    padding-top: 0;
+    padding-bottom: 5rem;
+
+  }
+
+}
+
+h5 {
+  font-family: "poppins-bold";
+  color: #FF0077;
+  font-size: 1.6rem;
+  line-height: 1.875;
+  font-weight: bold;
+  letter-spacing: .3rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+h1 {
+  font-family: "poppins-semibold", serif;
+  font-size: 2.6rem;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 5rem;
+  text-align: center;
+
+  @media (max-width:1100px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 760px) {
+    font-size: 1.4rem;
+  }
+
+}
+
+.mailbox-container {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  all: unset;
+  box-sizing: border-box;
+  width: 40%;
+  text-align: start;
+  overflow: hidden;
+
+  @media (max-width: 790px) {
+    width: 70%;
+  }
+}
+
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  padding: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  overflow: hidden;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #FF0077;
+}
+
+
+textarea {
+  padding-top: 2rem;
+  resize: vertical;
+  overflow: auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  width: 40%;
+
+  @media (max-width: 790px) {
+    width: 70%;
+  }
+}
+
+
+.sent-button {
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+  height: 4.6rem;
+  line-height: 4.6rem;
+  margin-top: 4.8rem;
+  margin-bottom: 3rem;
+  background: #FF0077;
+  color: #FFFFFF;
+  width: 40%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-family: "poppins-bold", sans-serif;
+  border: none;
+
+  @media (max-width: 790px) {
+    width: 70%;
+    font-size: 1.2rem;
+  }
+
+}
+
+.required-error {
+  font-family: "poppins-bold", sans-serif;
+  font-size: 1.1rem;
+  line-height: 2.4rem;
+  position: absolute;
+  bottom: -1.2rem;
+  right: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  padding: 0 2rem;
+  margin: 0;
+  color: #FFFFFF;
+  background: #FF0077;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 0;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+.location {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  @media (max-width: 1100px) {
+    margin-bottom: 2rem;
+  }
+}
+
+img {
+  width: 2.5rem;
+  filter: brightness(0) invert(1);
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.714;
+  letter-spacing: .15rem;
+  color: #FF0077;
+  text-wrap: nowrap;
+  margin-bottom: 1rem;
+
+  @media (max-width: 590px) {
+    font-size: 1.1rem;
+  }
+}
+
+.contact-me {
+  font-family: "poppins-regular", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #6e6e6e;
+  text-wrap: nowrap;
+  margin-bottom: 1rem;
+
+  @media (max-width: 590px) {
+    font-size: 1.2rem;
+  }
+}
+
+.contact-me a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+p a:hover {
+  color: #FF0077;
+  text-decoration: underline;
+}
+
+
+.copyright::after {
+  content: "|";
+  display: inline-block;
+  padding: 0 1rem 0 1.2rem;
+  color: rgba(255, 255, 255, 0.1);
+
+}
+
+.copyright,
+.distributed {
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: #6e6e6e;
+  display: inline;
+
+  @media (max-width: 370px) {
+    font-size: .9rem;
+  }
+}
+
+.last-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  /* 
+  გარკვეულ დივაისებზე ჩანს ბოლომდე, ზოგზე არ ჩანს კონტენტი ბოლომდე */
+  @media(max-width: 490px) {
+    margin-bottom: 12rem;
+  }
+
+  @media(max-width: 389px) {
+    margin-bottom: 5rem;
+  }
+}
+
+#go-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+}
+
+#go-top a {
+  text-decoration: none;
+  border: 0 none;
+  display: block;
+  height: 4.6rem;
+  width: 4rem;
+  line-height: 4.6rem;
+  text-align: center;
+  background: #cc005f;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#go-top a i {
+  font-size: 1.6rem;
+  line-height: 4.6rem;
+  color: #fff;
+}
+
+.emailSent {
+  color: #FF0077;
+  font-size: 1rem;
+}
+
+#email-error {
+  font-family: "poppins-bold", sans-serif;
+  font-size: .8rem;
+  line-height: 1.5rem;
+  margin-top: -3rem;
+  margin-left: 8rem;
+  color: #FFFFFF;
+  background: #FF0077;
+  padding: .5rem;
+  border-radius: 5px;
+
+}

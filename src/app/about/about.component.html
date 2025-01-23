@@ -1,0 +1,60 @@
+<section id="about">
+  <h1>Let me introduce myself</h1>
+  <div class="main-container">
+    <div class="about-work">
+      <h2>Work Experience</h2>
+
+
+      <div class="working-content">
+        <div class="icon-bg">
+          <img class="work-icon" src="/assets/images/work-icon1.png" alt="work-icon" />
+          <h3>Front-end Developer</h3>
+        </div>
+        <div>
+
+          <h5>August 2023 - Present</h5>
+          <img class="border-line" src="/assets/images/line.png" alt="border-line" />
+          <h4>Socar Georgia Petroleum</h4>
+          <p>As an Angular Developer in a team of 5 developers, I specialize in
+            creating responsive web applications using Angular 14+, Angular
+            Material, TypeScript, and Sass. I develop front-end solutions for
+            small and medium-sized projects for our company, collaborating
+            closely with back-end teams and designers. Utilizing GitLab for
+            version control, I translate Figma designs into HTML markup
+            ensuring clean, efficient code with a focus on optimal user
+            experience.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="about-skills">
+      <h2>Skills</h2>
+
+      <div class="skill-content">
+        <div class="icon-content">
+          <img class="study-icon" src="/assets/images/study.png" alt="study-icon" />
+          <h3>Front-end Development</h3>
+        </div>
+        <h5>Business and Technology University</h5>
+        <img class="border-line" src="/assets/images/line.png" alt="border-line" />
+        <div class="skill-container" *ngFor="let skill of skills">
+          <h5 class="skill-type">
+            {{ skill.name }}
+            <span [style.left.%]="skill.percentage">{{ skill.percentage }}%</span>
+          </h5>
+          <img class="line" src="/assets/images/line.png" alt="border-line" />
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="button-container">
+    <a class="button-hire smoothscroll" href="#contact" title="HIRE ME">HIRE ME</a>
+    <button class="button-cv" (click)="downloadCV()">DOWNLOAD CV</button>
+  </div>
+
+</section>

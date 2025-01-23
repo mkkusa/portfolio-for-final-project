@@ -1,0 +1,74 @@
+<section id="main">
+  <div class="main-div">
+    <div class="main-container">
+
+      <header>
+        <div class="row">
+          <div class="top-bar" (click)="toggleMenu()">
+            <a class="menu-toggle" href="#" [ngClass]="{ 'is-clicked': menuOpen }">
+              <span>Menu</span>
+            </a>
+
+            <div class="logo">
+              <a href="index.html">KARDS</a>
+            </div>
+
+            <nav id="main-nav-wrap" [ngClass]="{ 'open': menuOpen }">
+              <ul class="main-navigation" [class.open]="menuOpen">
+                <li class="current"><a class="smoothscroll" href="#main" title="" (click)="refreshPage($event)">Home</a>
+                </li>
+                <li><a class="smoothscroll" href="#about" title="">About</a></li>
+                <li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
+                <li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <div class="content-container">
+        <h5>HELLO WORLD</h5>
+        <h1>I'm Mako Mestumrishvili</h1>
+        <p>Front-end Developer</p>
+        <a class="button stroke smoothscroll" href="#about">MORE ABOUT ME
+          <img class="arrow-icon" src="/assets/images/arrow-down.png" alt="Arrow Down">
+        </a>
+
+        <a class="button stroke" [routerLink]="'/game/start'">PLAY GAME</a>
+
+
+      </div>
+
+      <div class="icon-container">
+        <a href="https://www.linkedin.com/in/mako-mestumrishvili-383b8a10b/" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin socialmedia-icon"></i>
+        </a>
+        <a href="https://github.com/mkkusa" target="_blank" title="GitHub">
+          <i class="fab fa-github socialmedia-icon"></i>
+        </a>
+        <a href="https://twitter.com/makomestumrishvili" target="_blank" title="Twitter">
+          <i class="fab fa-twitter socialmedia-icon"></i>
+        </a>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</section>
+<!-- <router-outlet></router-outlet> -->
+
+<section id="about">
+  <app-about></app-about>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+  <app-portfolio></app-portfolio>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <app-contact></app-contact>
+</section>

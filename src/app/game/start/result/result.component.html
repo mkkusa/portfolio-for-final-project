@@ -1,0 +1,49 @@
+<!-- <div class="result-container">
+  <h1>Quiz Results</h1>
+  <p>Total Questions: {{ totalQuestions }}</p>
+  <p>Correct Answers: {{ correctAnswers }}</p>
+  <p>Incorrect Answers: {{ incorrectAnswers }}</p>
+
+  <button (click)="restartQuiz()">Restart Quiz</button>
+</div> -->
+
+<div class="result-container">
+  <h1>Quiz Results</h1>
+  <p>Total Questions: {{ totalQuestions }}</p>
+  <p>Correct Answers: {{ correctAnswers }}</p>
+  <p>Incorrect Answers: {{ incorrectAnswers }}</p>
+
+  <button (click)="restartQuiz()">Restart Quiz</button>
+
+  <hr />
+
+  <h2>Add a New Question</h2>
+  <form (ngSubmit)="addQuestion()">
+    <label>
+      Question:
+      <input type="text" [(ngModel)]="newQuestion.question" name="question" required />
+    </label>
+
+    <label>
+      Answer A:
+      <input type="text" [(ngModel)]="newQuestion.answers.answer_a" name="answer_a" required />
+    </label>
+
+    <label>
+      Answer B:
+      <input type="text" [(ngModel)]="newQuestion.answers.answer_b" name="answer_b" required />
+    </label>
+
+    <label>
+      Answer C:
+      <input type="text" [(ngModel)]="newQuestion.answers.answer_c" name="answer_c" />
+    </label>
+
+    <label>
+      Answer D:
+      <input type="text" [(ngModel)]="newQuestion.answers.answer_d" name="answer_d" />
+    </label>
+
+    <button type="submit">Add Question</button>
+  </form>
+</div>

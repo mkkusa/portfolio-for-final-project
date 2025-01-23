@@ -1,0 +1,70 @@
+<section id="contact">
+
+  <h5>Contact</h5>
+  <h1>I'd Love To Hear From You</h1>
+
+
+  <div class="mailbox-container">
+    <form [formGroup]="formGroup" (ngSubmit)="send($event)" method="POST">
+      <input formControlName="name" type="text" id="message" [placeholder]="'Name'" />
+      <label class="required-error" style="display: block;"></label>
+      <input type="text" id="message" formControlName="email" [placeholder]="'Email'" />
+      <label id="email-error" *ngIf="formGroup.get('email')?.invalid && formGroup.get('email')?.touched">
+        Please enter a valid email address
+      </label>
+      <input type="text" id="message" formControlName="subject" [placeholder]="'Subject'" />
+      <textarea id="messagebox" formControlName="message" style="height: 200px"></textarea>
+      <input type="submit" class="sent-button" [value]="'Submit'" [disabled]="formGroup.invalid"
+        [style.opacity]="formGroup.valid ? '1' : '0.5'" />
+      <p class="emailSent" *ngIf="emailIsSent">Your message was sent. Thank you!</p>
+    </form>
+  </div>
+
+
+  <div class="contact-info">
+    <div class="location">
+      <img src="./assets/images/location.png" alt="location" />
+      <h4>Where to find me</h4>
+      <p class="contact-me">
+        <a href="https://www.google.com/maps?q=Tbilisi,+Georgia" target="_blank" rel="noopener noreferrer">
+          Tbilisi, Georgia
+        </a>
+      </p>
+    </div>
+
+    <div class="location">
+      <img src="./assets/images/email.png" alt="email" />
+      <h4>Email Me At</h4>
+      <p class="contact-me">
+        <a href="mailto:makomestumrishvili@gmail.com">
+          makomestumrishvili&#64;gmail.com
+        </a>
+      </p>
+    </div>
+
+    <div class="location">
+      <img src="./assets/images/telephone.png" alt="telephone" />
+      <h4>Call Me At</h4>
+      <p class="contact-me">
+        <a href="tel:+995555919686">
+          Mobile: (+995) 555 919686
+        </a>
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="last-title">
+    <h3 class="copyright">© Copyright 2025</h3>
+    <h3 class="distributed">Distributed by MM</h3>
+  </div>
+</section>
+
+<div class="scroll-top" *ngIf="!isFirstPage">
+  <div id="go-top" style="display:block;">
+    <a class="smoothscroll" title="Back to Top" href="#top">
+      <i class="fas fa-long-arrow-up"></i>
+    </a>
+  </div>
+</div>

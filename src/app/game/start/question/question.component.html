@@ -1,0 +1,29 @@
+<div *ngIf="currentQuestion; else loading">
+  <h1>Question {{ currentIndex + 1 }}</h1>
+  <p>{{ currentQuestion.question }}</p>
+
+  <!-- Display answers -->
+  <ul>
+    <li *ngFor="let answer of answers" [class.selected]="selectedAnswer === answer.key"
+      [class.correct]="hasSubmitted && correctAnswers.includes(answer.key)"
+      [class.incorrect]="hasSubmitted && selectedAnswer === answer.key && !correctAnswers.includes(answer.key)">
+      <button [disabled]="hasSubmitted" (click)="selectAnswer(answer.key)">
+        {{ answer.text }}
+      </button>
+    </li>
+  </ul>
+
+  <!-- Submit and Next Buttons -->
+  <div class="controls">
+    <button (click)="submitAnswer()" [disabled]="!selectedAnswer || hasSubmitted">
+      Submit
+    </button>
+    <button *ngIf="hasSubmitted" (click)="nextQuestion()">
+      Next
+    </button>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading questions...</p>
+</ng-template>

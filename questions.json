@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "id": "bee6",
+      "question": "which is javascript framework?",
+      "answers": {
+        "answer_a": "vue",
+        "answer_b": "angular",
+        "answer_c": "react",
+        "answer_d": "ragac"
+      }
+    }
+  ]
+}
